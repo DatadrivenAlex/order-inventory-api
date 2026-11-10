@@ -1,7 +1,7 @@
 [project]
 name = "order-inventory-api"
 version = "0.1.0"
-description = "portfolio demo: transactional orders and inventory with FastAPI and SQLite"
+description = "Portfolio demo: transactional orders and inventory with FastAPI and SQLite"
 requires-python = ">=3.11"
 dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1"]
 [dependency-groups]

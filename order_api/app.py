@@ -76,7 +76,7 @@ def create_app(db_path: str | None = None) -> FastAPI:
         """)
         db.executemany("INSERT OR IGNORE INTO products(sku,name,price_cents,stock) VALUES(?,?,?,?)", SEED)
 
-    app = FastAPI(title="Order & Inventory API", version="0.1.0", description="portfolio demo; no real payments or customer data.")
+    app = FastAPI(title="Order & Inventory API", version="0.1.0", description="Portfolio demo; no real payments or customer data.")
 
     def get_order(db, order_id):
         row = db.execute("SELECT id,status,total_cents,created_at FROM orders WHERE id=?", (order_id,)).fetchone()
